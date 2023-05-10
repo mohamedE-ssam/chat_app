@@ -1,4 +1,5 @@
 import 'package:chat_app/constants.dart';
+import 'package:chat_app/screens/chats/chat_Screen.dart';
 import 'package:flutter/material.dart';
 import '../../components/primary_button.dart';
 
@@ -22,7 +23,13 @@ class SigninSignoutScreen extends StatelessWidget {
           const Spacer(),
           PrimaryButton(
             color: Theme.of(context).colorScheme.primary,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ChatScreen(),
+                  ));
+            },
             title: 'Sign IN',
           ),
           const SizedBox(
